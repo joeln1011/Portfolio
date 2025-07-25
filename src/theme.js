@@ -10,6 +10,24 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: ['Poppins'].join(','),
+    color: '#fff',
+  },
+  palette: {
+    primary: {
+      main: '#1f242d',
+    },
+    secondary: {
+      main: '#7cf03d',
+    },
+    text: {
+      primary: '#fff',
+    },
+    background: {
+      main: '#1f242d',
+    },
+    action: {
+      hover: '#7cf03d',
+    },
   },
   components: {
     MuiTypography: {
@@ -17,6 +35,7 @@ const theme = createTheme({
         root: {
           '& .MuiTypography-body1': {
             fontSize: '0.875rem',
+            color: '#fff',
           },
         },
       },
