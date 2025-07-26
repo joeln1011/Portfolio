@@ -21,6 +21,7 @@ const SpanBox = styled(Box)(() => ({
       display: 'none',
     },
   },
+
   '&:before': {
     content: 'attr(datatype)',
     position: 'absolute',
@@ -43,15 +44,15 @@ const SpanBox = styled(Box)(() => ({
 const HomePage = () => {
   return (
     <Box>
-      <BarsAnimation />
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
-          gap: '50px',
+          gap: { xs: '20px', sm: '30px', md: '50px' },
+          flexDirection: { xs: 'column-reverse', md: 'row' },
           justifyContent: 'center',
-          height: '100vh',
-          padding: '60px 9% 0',
+          height: { xs: 'auto', md: '100vh' },
+          padding: { xs: '80px 5% 20px', md: '60px 9% 0' },
           color: '#fff',
           visibility: 'hidden',
           opacity: 0,
@@ -61,24 +62,36 @@ const HomePage = () => {
             '100%': {
               visibility: 'visible',
               opacity: 1,
+              overflow: 'auto',
             },
           },
         }}
       >
         {/* Introduce */}
-        <Box>
-          <Typography variant="h1" sx={{ fontSize: '55px' }}>
+        <Box
+          sx={{
+            width: { xs: '100%', md: 'auto' },
+            textAlign: { xs: 'center', md: 'left' },
+          }}
+        >
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: '32px', sm: '40px', md: '55px' } }}
+          >
             Joel Nguyen
           </Typography>
           <Typography
             variant="h2"
             sx={{
-              fontSize: '32px',
+              fontSize: { xs: '20px', sm: '26px', md: '32px' },
               marginTop: '10px',
               display: 'inline-block',
             }}
           >
-            I'm a &nbsp;
+            I'm a{' '}
+            <SpanBox style={{ '--i': 4 }} datatype="UX-UI Designer">
+              UX-UI Designer
+            </SpanBox>
             <SpanBox style={{ '--i': 3 }} datatype="Frontend Developer">
               Frontend Developer
             </SpanBox>
@@ -89,11 +102,17 @@ const HomePage = () => {
               Designer
             </SpanBox>
           </Typography>
-          <Box sx={{ marginTop: '10px', maxWidth: '600px' }}>
+          <Box
+            sx={{
+              marginTop: '10px',
+              maxWidth: { xs: '100%', md: '600px' },
+              mx: { xs: 'auto', md: 0 },
+            }}
+          >
             <Typography
               variant="p"
               sx={{
-                fontSize: '16px',
+                fontSize: { xs: '14px', md: '16px' },
               }}
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -101,26 +120,28 @@ const HomePage = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              electronic typesetting, remaining essentially unchanged.
             </Typography>
           </Box>
 
           <Box
-            sx={{ display: 'flex', alignItems: 'center', marginTop: '30px' }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              marginTop: '30px',
+              flexDirection: { xs: 'column', sm: 'row' },
+              gap: { xs: 2, sm: 0 },
+            }}
           >
             <Button
               sx={{
                 display: 'inline-block',
-                padding: '10px 30px',
+                padding: { xs: '8px 20px', md: '10px 30px' },
                 bgcolor: ' #7cf03d',
                 border: '2px solid #7cf03d',
                 borderRadius: '40px',
                 boxShadow: '0 0 10px #7cf03d',
-                fontSize: '16px',
+                fontSize: { xs: '14px', md: '16px' },
                 color: '#1f242d',
                 fontWeight: 600,
                 transition: '0.5s',
@@ -133,7 +154,14 @@ const HomePage = () => {
             >
               Download Resume
             </Button>
-            <Box sx={{ marginLeft: '20px' }}>
+            <Box
+              sx={{
+                marginLeft: { xs: 0, sm: '20px' },
+                marginTop: { xs: 2, sm: 0 },
+                display: 'flex',
+                justifyContent: { xs: 'center', sm: 'flex-start' },
+              }}
+            >
               <IconButton
                 sx={{
                   display: 'inline-flex',
@@ -175,18 +203,24 @@ const HomePage = () => {
         </Box>
 
         {/* Image */}
-        <Box sx={{ marginLeft: '40px' }}>
+        <Box
+          sx={{
+            marginLeft: { xs: 0, md: '40px' },
+            marginTop: { xs: 5, md: 0 },
+          }}
+        >
           <Box
             sx={{
               position: 'relative',
-              width: '32vw',
-              height: '32vw',
+              width: { xs: '70vw', sm: '50vw', md: '32vw' },
+              height: { xs: '70vw', sm: '50vw', md: '32vw' },
               borderRadius: '50%',
               padding: '5px',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               overflow: 'hidden',
+              mx: { xs: 'auto', md: 0 },
               ':before, :after': {
                 content: '""',
                 position: 'absolute',

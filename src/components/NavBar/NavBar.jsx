@@ -64,10 +64,10 @@ const NavBar = () => {
         />
       </Box>
       <Box component="nav" display={{ xs: 'none', md: 'flex' }}>
-        <NavBarItem href="#home" active>
-          Home
+        <NavBarItem href="#home">Home</NavBarItem>
+        <NavBarItem href="#about" active>
+          About
         </NavBarItem>
-        <NavBarItem href="#about">About</NavBarItem>
         <NavBarItem href="#projects">Projects</NavBarItem>
         <NavBarItem href="#contact">Contact</NavBarItem>
       </Box>
