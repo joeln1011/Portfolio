@@ -5,10 +5,17 @@ const StyledBox = styled(Box)(() => ({
   width: '100%',
   height: '100%',
   background: '#1f242d',
+  margin: 0,
+  padding: 0,
+  border: 'none',
+  boxSizing: 'border-box',
   transform: 'translateY(-100%)',
-  animation: 'barsAnimation 0.5s ease-in-out forwards',
+  animation: 'barsAnimation 0.5s ease-in-out both',
   animationDelay: 'calc(0.1s * var(--i))',
   '@keyframes barsAnimation': {
+    '0%': {
+      transform: 'translateY(-100%)',
+    },
     '100%': {
       transform: 'translateY(0%)',
     },
@@ -23,6 +30,8 @@ const BarsAnimation = () => {
         height: '100%',
         display: 'flex',
         zIndex: -1,
+        top: 0,
+        left: 0,
       }}
     >
       <StyledBox style={{ '--i': 6 }}></StyledBox>
