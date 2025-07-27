@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import BarsAnimation from '../components/BarsAnimation/BarsAnimation';
 
 import { styled } from '@mui/material/styles';
 const SpanBox = styled(Box)(() => ({
