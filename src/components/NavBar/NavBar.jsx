@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
 const NavBarItem = styled(Typography, {
@@ -64,12 +65,21 @@ const NavBar = () => {
         />
       </Box>
       <Box component="nav" display={{ xs: 'none', md: 'flex' }}>
-        <NavBarItem href="#home">Home</NavBarItem>
-        <NavBarItem href="#about" active>
+        <NavBarItem component={Link} to="/">
+          Home
+        </NavBarItem>
+        <NavBarItem component={Link} to="/services">
           Services
         </NavBarItem>
-        <NavBarItem href="#projects">Projects</NavBarItem>
-        <NavBarItem href="#contact">Contact</NavBarItem>
+        <NavBarItem component={Link} to="/resume">
+          Resume
+        </NavBarItem>
+        <NavBarItem component={Link} to="/projects">
+          Projects
+        </NavBarItem>
+        <NavBarItem component={Link} to="/contact">
+          Contact
+        </NavBarItem>
       </Box>
     </Box>
   );

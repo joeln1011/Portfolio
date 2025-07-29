@@ -8,16 +8,30 @@ import PaletteIcon from '@mui/icons-material/Palette';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
+
+import { styled } from '@mui/material/styles';
+const StyleBox = styled(Box)(() => ({
+  maxWidth: '450px',
+  padding: '30px 25px',
+  background: '#323946',
+  border: '2px solid #323946',
+  borderRadius: '10px',
+  transition: '0.5s',
+  ':hover': {
+    borderColor: '#7cf03d',
+    transform: 'scale(1.02)',
+  },
+}));
 const ServicesPage = () => {
   return (
     <Box
       className="services-page"
       sx={{
-        position: 'absolute',
         width: '100%',
-        height: '100%',
+        minHeight: '100vh',
         padding: '100px 9% 20px',
         color: '#fff',
+        boxSizing: 'border-box',
       }}
     >
       <Box
@@ -25,7 +39,7 @@ const ServicesPage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '20px',
+          marginBottom: '30px',
           gap: '12px',
         }}
       >
@@ -37,75 +51,153 @@ const ServicesPage = () => {
       {/* services-box */}
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <CodeIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">Web Development</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <CodeIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              Web Development
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '16px' }}>
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <BrushIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">UX/UI Design</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <BrushIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              UX/UI Design
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '16px' }}>
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <PaletteIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">Graphic Design</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <PaletteIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              Graphic Design
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '16px' }}>
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <TrendingUpIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">SEO</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <TrendingUpIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              SEO
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '16px' }}>
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <OndemandVideoIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">Video Editing</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <OndemandVideoIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              Video Editing
+            </Typography>
+            <Typography variant="body1">
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Box>
-            <CameraAltIcon />
-            <ArrowBackIcon />
-          </Box>
-          <Typography variant="h5">Photography</Typography>
-          <Typography variant="body1">
-            I create responsive and modern websites using the latest
-            technologies.
-          </Typography>
+          <StyleBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <CameraAltIcon />
+              <ArrowBackIcon />
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: '30px', margin: '10px 0 10px 0' }}
+            >
+              Photography
+            </Typography>
+            <Typography variant="body1">
+              I create responsive and modern websites using the latest
+              technologies.
+            </Typography>
+          </StyleBox>
         </Grid>
       </Grid>
     </Box>
