@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 const StyledBox = styled(Box)(() => ({
   component: 'div',
-  width: '100%',
-  height: '100%',
+  width: '100%', // 100% / 6 bars
+  height: '100vh',
   background: '#1f242d',
   margin: 0,
   padding: 0,
@@ -25,9 +25,9 @@ const BarsAnimation = () => {
   return (
     <Box
       sx={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
+        position: 'fixed',
+        width: '100vw',
+        height: '100vh',
         display: 'flex',
         zIndex: -1,
         top: 0,
