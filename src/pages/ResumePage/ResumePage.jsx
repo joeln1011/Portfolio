@@ -3,14 +3,20 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import HTML5 from '../assets/icons/html5.svg';
-import CSS3 from '../assets/icons/css3.svg';
-import JavaScript from '../assets/icons/javascript.svg';
-import TypeScript from '../assets/icons/typescript.svg';
-import ReactIcon from '../assets/icons/react.svg';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import NextJs from '../assets/icons/nextjs.svg';
+import SvgIcon from '@mui/material/SvgIcon';
+import { ReactComponent as HTML5 } from '~/assets/icons/html5.svg';
+import { ReactComponent as CSS3 } from '~/assets/icons/css3.svg';
+import { ReactComponent as JavaScript } from '~/assets/icons/javascript.svg';
+import { ReactComponent as TypeScript } from '~/assets/icons/typescript.svg';
+import { ReactComponent as ReactIcon } from '~/assets/icons/react.svg';
+import { ReactComponent as MongoDB } from '~/assets/icons/mongodb.svg';
+import { ReactComponent as ViteIcon } from '~/assets/icons/vite.svg';
+import { ReactComponent as GitHubIcon } from '~/assets/icons/github.svg';
+import { ReactComponent as MeterialUI } from '~/assets/icons/material-ui.svg';
+import { ReactComponent as TailwindCSS } from '~/assets/icons/tailwind.svg';
+import { ReactComponent as BootstrapIcon } from '~/assets/icons/bootstrap.svg';
 import { styled } from '@mui/material/styles';
+import { Tooltip } from '@mui/material';
 const ResumeButton = styled(Button, {
   shouldForwardProp: (prop) => prop !== 'active',
 })(({ active }) => ({
@@ -31,9 +37,38 @@ const ResumeButton = styled(Button, {
   },
 }));
 
+const StyledSvgIcon = styled(SvgIcon)(() => ({
+  width: '70px',
+  height: '70px',
+  cursor: 'pointer',
+  ':hover': { color: '#7cf03d' },
+}));
+
+const StyledBox = styled(Box)(() => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#323946',
+  borderRadius: '8px',
+  height: '130px',
+  width: '130px',
+}));
+
 const ResumePage = () => {
   const [activeTab, setActiveTab] = useState('Experience');
-
+  const skills = [
+    { icon: HTML5, title: 'HTML5' },
+    { icon: CSS3, title: 'CSS3' },
+    { icon: JavaScript, title: 'JavaScript' },
+    { icon: TypeScript, title: 'TypeScript' },
+    { icon: ReactIcon, title: 'React' },
+    { icon: MongoDB, title: 'MongoDB' },
+    { icon: ViteIcon, title: 'Vite' },
+    { icon: MeterialUI, title: 'Material UI' },
+    { icon: TailwindCSS, title: 'Tailwind CSS' },
+    { icon: BootstrapIcon, title: 'Bootstrap' },
+    { icon: GitHubIcon, title: 'GitHub' },
+  ];
   return (
     <Box
       className="resume-page"
@@ -43,6 +78,17 @@ const ResumePage = () => {
         padding: '100px 9% 20px',
         color: '#fff',
         boxSizing: 'border-box',
+        visibility: 'hidden',
+        opacity: 0,
+        animation: 'showContent 1.5s linear forwards',
+        animationDelay: '1.6s',
+        '@keyframes showContent': {
+          '100%': {
+            visibility: 'visible',
+            opacity: 1,
+            overflow: 'auto',
+          },
+        },
       }}
     >
       <Grid container spacing={2}>
@@ -171,36 +217,13 @@ const ResumePage = () => {
                   marginTop: '20px',
                 }}
               >
-                <Box
-                  component="img"
-                  src={HTML5}
-                  alt="HTML5"
-                  sx={{ width: '50px', height: '50px', filter: 'invert(1)' }}
-                />
-                <Box
-                  component="img"
-                  src={CSS3}
-                  alt="CSS3"
-                  sx={{ width: '50px', height: '50px', filter: 'invert(1)' }}
-                />
-                <Box
-                  component="img"
-                  src={JavaScript}
-                  alt="JavaScript"
-                  sx={{ width: '50px', height: '50px', filter: 'invert(1)' }}
-                />
-                <Box
-                  component="img"
-                  src={TypeScript}
-                  alt="TypeScript"
-                  sx={{ width: '50px', height: '50px', filter: 'invert(1)' }}
-                />
-                <Box
-                  component="img"
-                  src={NextJs}
-                  alt="NextJs"
-                  sx={{ width: '50px', height: '50px', filter: 'invert(1)' }}
-                />
+                {skills.map(({ icon: Icon, title }, idx) => (
+                  <Tooltip title={title} key={idx}>
+                    <StyledBox>
+                      <StyledSvgIcon component={Icon} />
+                    </StyledBox>
+                  </Tooltip>
+                ))}
               </Box>
             </Box>
           )}
