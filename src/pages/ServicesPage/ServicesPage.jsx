@@ -32,6 +32,17 @@ const ServicesPage = () => {
         padding: '100px 9% 20px',
         color: '#fff',
         boxSizing: 'border-box',
+        visibility: 'hidden',
+        opacity: 0,
+        animation: 'showContent 1.5s linear forwards',
+        animationDelay: '1.6s',
+        '@keyframes showContent': {
+          '100%': {
+            visibility: 'visible',
+            opacity: 1,
+            overflow: 'auto',
+          },
+        },
       }}
     >
       <Box
@@ -43,8 +54,10 @@ const ServicesPage = () => {
           gap: '12px',
         }}
       >
-        <Typography sx={{ fontSize: '45px' }}>My</Typography>
-        <Typography sx={{ fontSize: '45px', color: '#7cf03d' }}>
+        <Typography sx={{ fontSize: '45px', fontWeight: 500 }}>My</Typography>
+        <Typography
+          sx={{ fontSize: '45px', color: '#7cf03d', fontWeight: 500 }}
+        >
           Services
         </Typography>
       </Box>
