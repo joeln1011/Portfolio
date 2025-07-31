@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage/HomePage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import ResumePage from './pages/ResumePage/ResumePage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 function App() {
   const location = useLocation();
 
@@ -18,6 +19,8 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/resume" element={<ResumePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        {/* Redirect any unmatched routes to the home page */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Container>
