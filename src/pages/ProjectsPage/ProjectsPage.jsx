@@ -2,7 +2,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Tooltip from '@mui/material/Tooltip';
-import Grid from '@mui/material/Grid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import IconButton from '@mui/material/IconButton';
@@ -31,7 +30,7 @@ const ProjectDescription = [
   },
   {
     id: 3,
-    title: 'Fullstack Project',
+    title: 'We Connect',
     description:
       'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
     technologies: 'HTML5, CSS3, JavaScript',
@@ -41,7 +40,7 @@ const ProjectDescription = [
   },
   {
     id: 4,
-    title: 'Fullstack Project',
+    title: 'Portfolio Website',
     description:
       'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
     technologies: 'HTML5, CSS3, JavaScript',
@@ -73,12 +72,14 @@ const ProjectDescription = [
 
 const ProjectsPage = () => {
   const [currentProject, setCurrentProject] = useState(0);
+  const project = ProjectDescription[currentProject];
+
   return (
     <Box
       sx={{
         width: '100%',
         minHeight: '100vh',
-        padding: '100px 9% 20px',
+        padding: { xs: '80px 2% 20px', md: '100px 9% 20px' },
         color: '#fff',
         boxSizing: 'border-box',
         visibility: 'hidden',
@@ -99,151 +100,170 @@ const ProjectsPage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '30px',
+          marginBottom: { xs: '20px', md: '30px' },
           gap: '12px',
         }}
       >
-        <Typography sx={{ fontSize: '45px', fontWeight: 500 }}>
+        <Typography
+          sx={{ fontSize: { xs: '32px', md: '45px' }, fontWeight: 500 }}
+        >
           Latest
         </Typography>
         <Typography
-          sx={{ fontSize: '45px', color: '#7cf03d', fontWeight: 500 }}
+          sx={{
+            fontSize: { xs: '32px', md: '45px' },
+            color: '#7cf03d',
+            fontWeight: 500,
+          }}
         >
           Projects
         </Typography>
       </Box>
 
-      <Grid container spacing={3}>
-        {ProjectDescription.map((project) => (
-          <Grid item xs={12} key={project.id}>
-            <Box
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: { xs: '24px', md: '40px' },
+          alignItems: { xs: 'stretch', md: 'flex-start' },
+          justifyContent: 'center',
+          width: '100%',
+        }}
+      >
+        {/* Project Description */}
+        <Box
+          sx={{
+            padding: { xs: '10px', md: '20px' },
+            maxWidth: { xs: '100%', md: '500px' },
+            width: '100%',
+            margin: '0 auto',
+            order: { xs: 1, md: 0 }, // Description second on mobile, first on desktop
+          }}
+        >
+          <Typography
+            variant="p"
+            sx={{
+              fontSize: { xs: '48px', md: '80px' },
+              WebkitTextStroke: '1px #fff',
+              color: 'transparent',
+              lineHeight: '1',
+            }}
+          >
+            {String(currentProject + 1).padStart(2, '0')}
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{ fontSize: { xs: '22px', md: '35px' }, margin: '8px 0 20px' }}
+          >
+            {project.title}
+          </Typography>
+          <Typography variant="p" sx={{ fontSize: { xs: '14px', md: '16px' } }}>
+            {project.description}
+          </Typography>
+          <Box>
+            <Typography
+              variant="p"
               sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
-                gap: '40px',
-                alignItems: 'flex-start',
-                justifyContent: 'center',
-                width: '100%',
+                margin: '20px 0',
+                color: '#7cf03d',
+                fontSize: { xs: '14px', md: '16px' },
               }}
             >
-              {/* Project Description */}
-              <Box sx={{ padding: '20px', maxWidth: '500px' }}>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontSize: '80px',
-                    WebkitTextStroke: '1px #fff',
-                    color: 'transparent',
-                    lineHeight: '1',
-                  }}
-                >
-                  {String(currentProject + 1).padStart(2, '0')}
-                </Typography>
-                <Typography
-                  variant="h5"
-                  sx={{ fontSize: '35px', margin: '8px 0 20px' }}
-                >
-                  {project.title}
-                </Typography>
-                <Typography variant="p" sx={{ fontSize: '16px' }}>
-                  {project.description}
-                </Typography>
-                <Box>
-                  <Typography
-                    variant="p"
-                    sx={{
-                      margin: '20px 0',
-                      color: '#7cf03d',
-                    }}
-                  >
-                    {project.technologies}
-                  </Typography>
-                </Box>
-                <Divider
-                  sx={{
-                    width: '100%',
-                    margin: '20px 0',
-                    borderColor: '#fff',
-                  }}
-                />
-                <Box>
-                  <Tooltip title="Live Project">
-                    <IconButton
-                      sx={{
-                        color: '#fff',
-                        padding: '13px',
-                        fontSize: '30px',
-                        backgroundColor: '#323946',
-                        borderRadius: '50%',
-                        marginRight: '15px',
-                        transform: 'rotate(135deg)',
-                        transition: '0.5s',
-                        ':hover': {
-                          color: '#7cf03d',
-                        },
-                      }}
-                      component="a"
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ArrowBackIcon />
-                    </IconButton>
-                  </Tooltip>
-                  <Tooltip title="GitHub Repository">
-                    <IconButton
-                      sx={{
-                        color: '#fff',
-                        padding: '13px',
-                        fontSize: '30px',
-                        backgroundColor: '#323946',
-                        borderRadius: '50%',
-                        transition: '0.5s',
-                        ':hover': {
-                          color: '#7cf03d',
-                        },
-                      }}
-                      component="a"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GitHubIcon />
-                    </IconButton>
-                  </Tooltip>
-                </Box>
-                {/* Navigation for projects */}
-                <Box sx={{ display: 'flex', gap: 2, marginTop: 3 }}>
-                  <IconButton
-                    sx={{ color: '#fff' }}
-                    onClick={() =>
-                      setCurrentProject((prev) =>
-                        prev === 0 ? ProjectDescription.length - 1 : prev - 1
-                      )
-                    }
-                  >
-                    <ArrowBackIcon />
-                  </IconButton>
-                  <IconButton
-                    sx={{ color: '#fff' }}
-                    onClick={() =>
-                      setCurrentProject((prev) =>
-                        prev === ProjectDescription.length - 1 ? 0 : prev + 1
-                      )
-                    }
-                  >
-                    <ArrowBackIcon sx={{ transform: 'rotate(180deg)' }} />
-                  </IconButton>
-                </Box>
-              </Box>
-              {/* Carousel Image */}
-              <Box sx={{ padding: '35px', maxWidth: '100%' }}>
-                <CarouselProject images={project.images} />
-              </Box>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
+              {project.technologies}
+            </Typography>
+          </Box>
+          <Divider
+            sx={{
+              width: '100%',
+              margin: '20px 0',
+              borderColor: '#fff',
+            }}
+          />
+          <Box>
+            <Tooltip title="Live Project">
+              <IconButton
+                sx={{
+                  color: '#fff',
+                  padding: '13px',
+                  fontSize: '30px',
+                  backgroundColor: '#323946',
+                  borderRadius: '50%',
+                  marginRight: '15px',
+                  transform: 'rotate(135deg)',
+                  transition: '0.5s',
+                  ':hover': {
+                    color: '#7cf03d',
+                  },
+                }}
+                component="a"
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ArrowBackIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="GitHub Repository">
+              <IconButton
+                sx={{
+                  color: '#fff',
+                  padding: '13px',
+                  fontSize: '30px',
+                  backgroundColor: '#323946',
+                  borderRadius: '50%',
+                  transition: '0.5s',
+                  ':hover': {
+                    color: '#7cf03d',
+                  },
+                }}
+                component="a"
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        </Box>
+        {/* Carousel Image */}
+        <Box
+          sx={{
+            padding: { xs: '10px', md: '35px' },
+            maxWidth: { xs: '100%', md: '800px' },
+            width: '100%',
+            margin: '0 auto',
+            order: { xs: 0, md: 1 }, // Carousel first on mobile, second on desktop
+          }}
+        >
+          <CarouselProject images={project.images} />
+        </Box>
+        {/* Navigation for projects */}
+        <Box
+          sx={{ display: 'flex', gap: 2, marginTop: 1, borderRadius: '10px' }}
+        >
+          <IconButton
+            sx={{ color: '#fff' }}
+            onClick={() =>
+              setCurrentProject((prev) =>
+                prev === 0 ? ProjectDescription.length - 1 : prev - 1
+              )
+            }
+          >
+            <ArrowBackIcon />
+          </IconButton>
+          <IconButton
+            sx={{ color: '#fff' }}
+            onClick={() =>
+              setCurrentProject((prev) =>
+                prev === ProjectDescription.length - 1 ? 0 : prev + 1
+              )
+            }
+          >
+            <ArrowBackIcon sx={{ transform: 'rotate(180deg)' }} />
+          </IconButton>
+        </Box>
+      </Box>
     </Box>
   );
 };
