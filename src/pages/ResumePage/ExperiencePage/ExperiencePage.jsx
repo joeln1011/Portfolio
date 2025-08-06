@@ -9,7 +9,6 @@ const ExperiencePage = () => {
         padding: '35px',
         textAlign: 'left',
         maxWidth: '800px',
-        border: '1px solid #ccc',
       }}
     >
       <Box sx={{ display: 'flex', marginBottom: '30px', gap: '12px' }}>
@@ -28,19 +27,20 @@ const ExperiencePage = () => {
       </Typography>
       <Box
         sx={{
+          marginTop: '30px',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(30rem, 1fr))',
-          gap: '2rem',
-          height: '45rem',
-          overflowY: 'auto',
+          gap: '20px',
+          height: '450px',
+          overflowX: 'auto',
         }}
       >
         <Box
           sx={{
             backgroundColor: '#323946',
-            borderRadius: '0.8rem',
-            padding: '3rem 2.5rem',
-            height: 'calc((45rem - 2rem)/2)',
+            borderRadius: '10px',
+            padding: '30px 25px',
+            height: 'calc((450px - 20px)/2)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -52,8 +52,31 @@ const ExperiencePage = () => {
           <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
             Frontend Developer
           </Typography>
-          <Typography sx={{ fontSize: '16px' }}>AndMine</Typography>
-          <Typography sx={{ fontSize: '16px', marginTop: '15px' }}>
+          <Typography
+            sx={{
+              fontSize: '16px',
+              position: 'relative',
+              marginLeft: '20px',
+              marginBottom: '20px',
+              ':before': {
+                content: '""',
+                position: 'absolute',
+                left: '-5px',
+                top: '50%',
+                width: '10px',
+                height: '10px',
+                transform: 'translateY(-50%)',
+                padding: '5px',
+                backgroundColor: '#7cf03d',
+                borderRadius: '50%',
+                marginLeft: '-20px',
+              },
+            }}
+          >
+            AndMine
+          </Typography>
+
+          <Typography sx={{ fontSize: '16px' }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
