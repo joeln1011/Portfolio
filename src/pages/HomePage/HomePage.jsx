@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import User from '../../assets/home.png';
 import { styled } from '@mui/material/styles';
 const SpanBox = styled(Box)(() => ({
   component: 'span',
@@ -264,7 +264,8 @@ const HomePage = () => {
                 objectFit: 'cover',
                 mixBlendMode: 'lighten',
               }}
-              src="src/assets/home.png"
+              alt="joelnguyen"
+              src={User}
             ></Box>
           </Box>
         </Box>
