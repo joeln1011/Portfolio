@@ -6,6 +6,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import IconButton from '@mui/material/IconButton';
 import CarouselProject from '../../components/Carousel/CarouselProject';
+import Portfolio1 from '../../assets/portfolio1.jpg';
+import Portfolio2 from '../../assets/portfolio2.jpg';
+import Portfolio3 from '../../assets/portfolio3.jpg';
+import Portfolio4 from '../../assets/portfolio4.jpg';
+import Portfolio5 from '../../assets/portfolio5.jpg';
+import Portfolio6 from '../../assets/portfolio6.jpg';
 import { useState } from 'react';
 const ProjectDescription = [
   {
@@ -16,7 +22,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio1.jpg'],
+    images: [Portfolio1],
   },
   {
     id: 2,
@@ -26,7 +32,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio2.jpg'],
+    images: [Portfolio2],
   },
   {
     id: 3,
@@ -36,7 +42,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio3.jpg'],
+    images: [Portfolio3],
   },
   {
     id: 4,
@@ -46,7 +52,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio4.jpg'],
+    images: [Portfolio4],
   },
   {
     id: 5,
@@ -56,7 +62,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio5.jpg'],
+    images: [Portfolio5],
   },
   {
     id: 6,
@@ -66,7 +72,7 @@ const ProjectDescription = [
     technologies: 'HTML5, CSS3, JavaScript',
     liveLink: '#',
     githubLink: '#',
-    images: ['src/assets/portfolio6.jpg'],
+    images: [Portfolio6],
   },
 ];
 

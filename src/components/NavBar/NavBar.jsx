@@ -1,10 +1,12 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import React from 'react';
+import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
 
+import { styled } from '@mui/material/styles';
 const NavBarItem = styled(Typography, {
   shouldForwardProp: (prop) => prop !== 'active',
 })(({ active }) => ({
@@ -22,6 +24,16 @@ const NavBarItem = styled(Typography, {
 }));
 
 const NavBar = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const navLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'Services', to: '/services' },
+    { label: 'Resume', to: '/resume' },
+    { label: 'Projects', to: '/projects' },
+    { label: 'Contact', to: '/contact' },
+  ];
+
   return (
     <Box
       sx={{
@@ -53,33 +65,59 @@ const NavBar = () => {
         </Typography>
       </Box>
       <Box display={{ xs: 'flex', md: 'none' }}>
-        <MenuIcon
+        <IconButton
+          onClick={() => setDrawerOpen(true)}
           sx={{
             color: '#fff',
             fontSize: '30px',
-            cursor: 'pointer',
             '&:hover': {
               color: '#7cf03d',
             },
           }}
-        />
+        >
+          <MenuIcon />
+        </IconButton>
+        <Drawer
+          anchor="top"
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          PaperProps={{
+            sx: {
+              bgcolor: '#1f242d',
+              width: '100%',
+              padding: 2,
+              alignItems: 'center',
+            },
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 2,
+              mt: 4,
+            }}
+          >
+            {navLinks.map((link) => (
+              <NavBarItem
+                key={link.to}
+                component={Link}
+                to={link.to}
+                onClick={() => setDrawerOpen(false)}
+                sx={{ marginLeft: 0 }}
+              >
+                {link.label}
+              </NavBarItem>
+            ))}
+          </Box>
+        </Drawer>
       </Box>
       <Box component="nav" display={{ xs: 'none', md: 'flex' }}>
-        <NavBarItem component={Link} to="/">
-          Home
-        </NavBarItem>
-        <NavBarItem component={Link} to="/services">
-          Services
-        </NavBarItem>
-        <NavBarItem component={Link} to="/resume">
-          Resume
-        </NavBarItem>
-        <NavBarItem component={Link} to="/projects">
-          Projects
-        </NavBarItem>
-        <NavBarItem component={Link} to="/contact">
-          Contact
-        </NavBarItem>
+        {navLinks.map((link) => (
+          <NavBarItem key={link.to} component={Link} to={link.to}>
+            {link.label}
+          </NavBarItem>
+        ))}
       </Box>
     </Box>
   );
