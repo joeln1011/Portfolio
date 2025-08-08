@@ -270,6 +270,7 @@ const HomePage = () => {
                 objectFit: 'cover',
                 mixBlendMode: 'lighten',
               }}
+              alt="joelnguyen"
               src={User}
             ></Box>
           </Box>
