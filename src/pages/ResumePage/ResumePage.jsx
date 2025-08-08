@@ -18,6 +18,7 @@ const ResumeButton = styled(Button, {
   backgroundColor: '#323946',
   border: '2px solid #323946',
   marginBottom: '20px',
+  borderRadius: '10px',
   fontSize: '16px',
   fontWeight: 500,
   cursor: 'pointer',
@@ -58,7 +59,6 @@ const ResumePage = () => {
         <Grid size={{ xs: 12, sm: 4 }}>
           <Box
             sx={{
-              border: '2px solid #7cf03d',
               borderRadius: '10px',
             }}
           >
@@ -109,11 +109,7 @@ const ResumePage = () => {
 
         {/* resume-box 2*/}
         <Grid size={{ xs: 12, sm: 8 }}>
-          <Box
-            sx={{
-              border: '2px solid #7cf03d',
-            }}
-          >
+          <Box sx={{}}>
             {activeTab === 'Experience' && <ExperiencePage />}
             {activeTab === 'Education' && <EducationPage />}
             {activeTab === 'Skills' && <SkillsPage />}
