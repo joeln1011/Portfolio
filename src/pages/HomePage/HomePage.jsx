@@ -2,8 +2,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MyResume from '/resume/HungNguyenResume.pdf';
 import User from '../../assets/home.png';
 import { styled } from '@mui/material/styles';
 const SpanBox = styled(Box)(() => ({
@@ -48,7 +50,7 @@ const HomePage = () => {
         alignItems: 'center',
         gap: { xs: '20px', sm: '30px', md: '50px' },
         flexDirection: { xs: 'column-reverse', md: 'row' },
-        justifyContent: 'center',
+        justifyContent: { xs: 'center', sm: 'center', md: 'flex-start' },
         height: { xs: 'auto', md: '100vh' },
         padding: { xs: '80px 5% 20px', md: '60px 9% 0' },
         color: '#fff',
@@ -65,7 +67,6 @@ const HomePage = () => {
         },
       }}
     >
-      {/* Introduce */}
       <Box
         sx={{
           width: { xs: '100%', md: 'auto' },
@@ -110,15 +111,15 @@ const HomePage = () => {
           <Typography
             variant="p"
             sx={{
-              fontSize: { xs: '14px', md: '16px' },
+              fontSize: '16px',
             }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            I am passionate about creating beautiful, functional, and
+            user-friendly digital experiences and intuitive interfaces for web
+            applications. With a strong background in both design and
+            development, I bridge the gap between aesthetics and technology. My
+            goal is to deliver seamless, accessible, and engaging solutions that
+            delight users and drive business success.
           </Typography>
         </Box>
 
@@ -129,11 +130,14 @@ const HomePage = () => {
             marginTop: '30px',
             flexDirection: { xs: 'column', sm: 'row' },
             gap: { xs: 2, sm: 0 },
+            justifyContent: { xs: 'center', sm: 'center', md: 'flex-start' }, // Center on mobile & tablet
           }}
         >
           <Button
+            href={MyResume}
+            download="Hung_Joel_Nguyen_Resume.pdf"
+            startIcon={<DownloadIcon />}
             sx={{
-              display: 'inline-block',
               padding: { xs: '8px 20px', md: '10px 30px' },
               bgcolor: ' #7cf03d',
               border: '2px solid #7cf03d',
@@ -157,10 +161,11 @@ const HomePage = () => {
               marginLeft: { xs: 0, sm: '20px' },
               marginTop: { xs: 2, sm: 0 },
               display: 'flex',
-              justifyContent: { xs: 'center', sm: 'flex-start' },
+              justifyContent: { xs: 'center', sm: 'center', md: 'flex-start' }, // Center icons on tablet
             }}
           >
             <IconButton
+              href="https://github.com/joeln1011"
               sx={{
                 display: 'inline-flex',
                 padding: '8px',
@@ -179,6 +184,7 @@ const HomePage = () => {
               <GitHubIcon />
             </IconButton>
             <IconButton
+              href="https://www.linkedin.com/in/hung-nguyen-80bb0b376"
               sx={{
                 display: 'inline-flex',
                 padding: '8px',

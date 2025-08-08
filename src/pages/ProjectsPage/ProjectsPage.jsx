@@ -50,7 +50,7 @@ const ProjectDescription = [
     description:
       'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
     technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: '#',
+    liveLink: 'https://www.joelnguyendev.com',
     githubLink: '#',
     images: [Portfolio4],
   },

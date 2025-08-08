@@ -53,65 +53,72 @@ const ResumePage = () => {
         },
       }}
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {/* resume-box 1 */}
-        <Grid>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <Box
             sx={{
-              padding: '20px',
-              maxWidth: '400px',
+              border: '2px solid #7cf03d',
+              borderRadius: '10px',
             }}
           >
+            <Typography
+              component="h2"
+              sx={{ fontSize: '45px', fontWeight: 500 }}
+            >
+              Why Hire Me?
+            </Typography>
+            <Typography
+              component="p"
+              sx={{ fontSize: '16px', margin: '20px 0 25px' }}
+            >
+              I am a passionate and dedicated web developer with a strong
+              foundation in modern web technologies. My expertise lies in
+              creating responsive, user-friendly, and visually appealing
+              websites that not only meet client requirements but also provide
+              an exceptional user experience.
+            </Typography>
             <Box>
-              <Typography component="h2" sx={{ fontSize: '45px' }}>
-                Why Hire Me?
-              </Typography>
-              <Typography
-                component="p"
-                sx={{ fontSize: '16px', margin: '20px 0 25px' }}
+              <ResumeButton
+                active={activeTab === 'Experience'}
+                onClick={() => setActiveTab('Experience')}
               >
-                I am a passionate and dedicated web developer with a strong
-                foundation in modern web technologies. My expertise lies in
-                creating responsive, user-friendly, and visually appealing
-                websites that not only meet client requirements but also provide
-                an exceptional user experience.
-              </Typography>
-              <Box>
-                <ResumeButton
-                  active={activeTab === 'Experience'}
-                  onClick={() => setActiveTab('Experience')}
-                >
-                  Experience
-                </ResumeButton>
-                <ResumeButton
-                  active={activeTab === 'Education'}
-                  onClick={() => setActiveTab('Education')}
-                >
-                  Education
-                </ResumeButton>
-                <ResumeButton
-                  active={activeTab === 'Skills'}
-                  onClick={() => setActiveTab('Skills')}
-                >
-                  Skills
-                </ResumeButton>
-                <ResumeButton
-                  active={activeTab === 'About Me'}
-                  onClick={() => setActiveTab('About Me')}
-                >
-                  About Me
-                </ResumeButton>
-              </Box>
+                Experience
+              </ResumeButton>
+              <ResumeButton
+                active={activeTab === 'Education'}
+                onClick={() => setActiveTab('Education')}
+              >
+                Education
+              </ResumeButton>
+              <ResumeButton
+                active={activeTab === 'Skills'}
+                onClick={() => setActiveTab('Skills')}
+              >
+                Skills
+              </ResumeButton>
+              <ResumeButton
+                active={activeTab === 'About Me'}
+                onClick={() => setActiveTab('About Me')}
+              >
+                About Me
+              </ResumeButton>
             </Box>
           </Box>
         </Grid>
 
         {/* resume-box 2*/}
-        <Grid>
-          {activeTab === 'Experience' && <ExperiencePage />}
-          {activeTab === 'Education' && <EducationPage />}
-          {activeTab === 'Skills' && <SkillsPage />}
-          {activeTab === 'About Me' && <AboutMePage />}
+        <Grid size={{ xs: 12, sm: 8 }}>
+          <Box
+            sx={{
+              border: '2px solid #7cf03d',
+            }}
+          >
+            {activeTab === 'Experience' && <ExperiencePage />}
+            {activeTab === 'Education' && <EducationPage />}
+            {activeTab === 'Skills' && <SkillsPage />}
+            {activeTab === 'About Me' && <AboutMePage />}
+          </Box>
         </Grid>
       </Grid>
     </Box>
