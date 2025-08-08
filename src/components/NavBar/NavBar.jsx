@@ -1,14 +1,10 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link, useLocation } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import { useState } from 'react';
-import { useState } from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 import { styled } from '@mui/material/styles';
 const NavBarItem = styled(Typography, {
@@ -37,7 +33,6 @@ const NavBar = () => {
     { label: 'Projects', to: '/projects' },
     { label: 'Contact', to: '/contact' },
   ];
-
   return (
     <Box
       sx={{
@@ -85,7 +80,6 @@ const NavBar = () => {
           anchor="top"
           open={drawerOpen}
           onClose={() => setDrawerOpen(false)}
-
           ModalProps={{
             keepMounted: true,
           }}
@@ -95,14 +89,16 @@ const NavBar = () => {
             '& .MuiDrawer-paper': {
               backgroundColor: '#1f242d',
               justifyContent: 'center',
-
-          PaperProps={{
-            sx: {
-              bgcolor: '#1f242d',
-              width: '100%',
-              padding: 2,
-
-              alignItems: 'center',
+            },
+          }}
+          slotProps={{
+            paper: {
+              sx: {
+                bgcolor: '#1f242d',
+                width: '100%',
+                padding: 2,
+                alignItems: 'center',
+              },
             },
           }}
         >
@@ -121,7 +117,6 @@ const NavBar = () => {
                 to={link.to}
                 onClick={() => setDrawerOpen(false)}
                 sx={{ marginLeft: 0 }}
-
                 active={location.pathname === link.to}
               >
                 {link.label}
@@ -138,7 +133,6 @@ const NavBar = () => {
             to={link.to}
             active={location.pathname === link.to}
           >
-          <NavBarItem key={link.to} component={Link} to={link.to}>
             {link.label}
           </NavBarItem>
         ))}
