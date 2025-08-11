@@ -98,6 +98,7 @@ const ServicesPage = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginBottom: '30px',
+          marginTop: '20px',
           gap: '10px',
         }}
       >

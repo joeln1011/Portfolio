@@ -8,7 +8,7 @@ const CarouselProject = ({ images }) => {
     <Box
       sx={{
         width: { xs: '100%', md: `${IMAGE_WIDTH}px` },
-        height: { xs: '220px', md: '450px' },
+        height: { xs: '320px', md: '450px' },
         borderRadius: '10px',
         overflow: 'hidden',
         position: 'relative',

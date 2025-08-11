@@ -64,7 +64,7 @@ const ResumePage = () => {
           >
             <Typography
               component="h2"
-              sx={{ fontSize: '45px', fontWeight: 500 }}
+              sx={{ fontSize: '45px', fontWeight: 500, marginTop: '20px' }}
             >
               Why Hire Me?
             </Typography>
@@ -109,7 +109,7 @@ const ResumePage = () => {
 
         {/* resume-box 2*/}
         <Grid size={{ xs: 12, sm: 8 }}>
-          <Box sx={{}}>
+          <Box sx={{ marginTop: '20px' }}>
             {activeTab === 'Experience' && <ExperiencePage />}
             {activeTab === 'Education' && <EducationPage />}
             {activeTab === 'Skills' && <SkillsPage />}

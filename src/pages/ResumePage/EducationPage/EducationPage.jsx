@@ -1,12 +1,47 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+
+//import { styles } from '@mui/material/styles';
+
 const EducationPage = () => {
+  const educationData = [
+    {
+      id: 1,
+      year: 'March 2025 - July 2025',
+      degree: 'Website Course',
+      institution: 'Online Course',
+      description:
+        'A comprehensive online course covering the fundamentals of programming.',
+    },
+    {
+      id: 2,
+      year: 'March 2019 - July 2023',
+      degree: 'Bachelor of Mobile Application Development',
+      institution: 'Academy of Interactive Technology',
+      description:
+        'A four-year degree program focused on mobile application development.',
+    },
+    {
+      id: 3,
+      year: 'July 2017 - March 2018',
+      degree: 'Diploma of Information Technology',
+      institution: 'James Cook University',
+      description:
+        'A one-year diploma program providing foundational knowledge in information technology.',
+    },
+  ];
   return (
-    <Box
-      className="resume-box"
-      sx={{ padding: '35px', textAlign: 'left', maxWidth: '800px' }}
-    >
-      <Box sx={{ display: 'flex', marginBottom: '30px', gap: '12px' }}>
+    <Box className="resume-box">
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { xs: 'center', md: 'flex-start' },
+          marginBottom: '30px',
+          gap: '10px',
+        }}
+      >
         <Typography sx={{ fontSize: '45px', fontWeight: 500 }}>My</Typography>
         <Typography
           sx={{ fontSize: '45px', fontWeight: 500, color: '#7cf03d' }}
@@ -15,164 +50,63 @@ const EducationPage = () => {
         </Typography>
       </Box>
       <Typography component="p" sx={{ fontSize: '16px' }}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
+        Here is a summary of my educational background:
       </Typography>
-      <Box
-        sx={{
-          marginTop: '30px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(30rem, 1fr))',
-          gap: '20px',
-          height: '450px',
-          overflowX: 'auto',
-        }}
-      >
-        <Box
-          sx={{
-            backgroundColor: '#323946',
-            borderRadius: '10px',
-            padding: '30px 25px',
-            height: 'calc((450px - 20px)/2)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography sx={{ fontSize: '16px', color: '#7cf03d' }}>
-            Ferbuary 2024 - July 2024
-          </Typography>
-          <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
-            Frontend Developer
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '16px',
-              position: 'relative',
-              marginLeft: '20px',
-              marginBottom: '20px',
-              ':before': {
-                content: '""',
-                position: 'absolute',
-                left: '-5px',
-                top: '50%',
-                width: '10px',
-                height: '10px',
-                transform: 'translateY(-50%)',
-                padding: '5px',
-                backgroundColor: '#7cf03d',
-                borderRadius: '50%',
-                marginLeft: '-20px',
-              },
-            }}
-          >
-            AndMine
-          </Typography>
-
-          <Typography sx={{ fontSize: '16px' }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            backgroundColor: '#323946',
-            borderRadius: '10px',
-            padding: '30px 25px',
-            height: 'calc((450px - 20px)/2)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography sx={{ fontSize: '16px', color: '#7cf03d' }}>
-            Ferbuary 2024 - July 2024
-          </Typography>
-          <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
-            Frontend Developer
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '16px',
-              position: 'relative',
-              marginLeft: '20px',
-              marginBottom: '20px',
-              ':before': {
-                content: '""',
-                position: 'absolute',
-                left: '-5px',
-                top: '50%',
-                width: '10px',
-                height: '10px',
-                transform: 'translateY(-50%)',
-                padding: '5px',
-                backgroundColor: '#7cf03d',
-                borderRadius: '50%',
-                marginLeft: '-20px',
-              },
-            }}
-          >
-            AndMine
-          </Typography>
-
-          <Typography sx={{ fontSize: '16px' }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            backgroundColor: '#323946',
-            borderRadius: '10px',
-            padding: '30px 25px',
-            height: 'calc((450px - 20px)/2)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography sx={{ fontSize: '16px', color: '#7cf03d' }}>
-            Ferbuary 2024 - July 2024
-          </Typography>
-          <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
-            Frontend Developer
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '16px',
-              position: 'relative',
-              marginLeft: '20px',
-              marginBottom: '20px',
-              ':before': {
-                content: '""',
-                position: 'absolute',
-                left: '-5px',
-                top: '50%',
-                width: '10px',
-                height: '10px',
-                transform: 'translateY(-50%)',
-                padding: '5px',
-                backgroundColor: '#7cf03d',
-                borderRadius: '50%',
-                marginLeft: '-20px',
-              },
-            }}
-          >
-            AndMine
-          </Typography>
-
-          <Typography sx={{ fontSize: '16px' }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </Typography>
-        </Box>
-      </Box>
+      <Grid container spacing={2} sx={{ marginTop: '20px' }}>
+        {educationData.map((education) => (
+          <Grid size={{ xs: 12, sm: 12 }}>
+            <Box
+              sx={{
+                gap: '20px',
+              }}
+            >
+              <Box
+                sx={{
+                  backgroundColor: '#323946',
+                  borderRadius: '10px',
+                  padding: '30px 25px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                }}
+              >
+                <Typography sx={{ fontSize: '16px', color: '#7cf03d' }}>
+                  {education.year}
+                </Typography>
+                <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
+                  {education.degree}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: '16px',
+                    position: 'relative',
+                    marginLeft: '20px',
+                    marginBottom: '20px',
+                    ':before': {
+                      content: '""',
+                      position: 'absolute',
+                      left: '-5px',
+                      top: '50%',
+                      width: '10px',
+                      height: '10px',
+                      transform: 'translateY(-50%)',
+                      padding: '5px',
+                      backgroundColor: '#7cf03d',
+                      borderRadius: '50%',
+                      marginLeft: '-20px',
+                    },
+                  }}
+                >
+                  {education.institution}
+                </Typography>
+                <Typography sx={{ fontSize: '16px' }}>
+                  {education.description}
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };

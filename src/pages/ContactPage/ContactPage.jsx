@@ -34,6 +34,7 @@ const ContactPage = () => {
           maxWidth: { xs: '100%', md: '30%' },
           marginRight: { xs: 0, md: '20px' },
           marginBottom: { xs: '24px', md: 0 },
+          marginTop: { xs: '20px', md: '30px' },
         }}
       >
         <Typography variant="h4">Let's Work Together</Typography>
@@ -95,6 +96,7 @@ const ContactPage = () => {
             justifyContent: 'center',
             alignItems: 'center',
             marginBottom: { xs: '20px', md: '30px' },
+            marginTop: { xs: '20px', md: '30px' },
             gap: '12px',
           }}
         >
