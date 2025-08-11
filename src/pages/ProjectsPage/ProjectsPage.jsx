@@ -106,21 +106,16 @@ const ProjectsPage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: { xs: '20px', md: '30px' },
-          gap: '12px',
+          marginBottom: '30px',
+          marginTop: '20px',
+          gap: '10px',
         }}
       >
-        <Typography
-          sx={{ fontSize: { xs: '32px', md: '45px' }, fontWeight: 500 }}
-        >
+        <Typography sx={{ fontSize: '45px', fontWeight: 500 }}>
           Latest
         </Typography>
         <Typography
-          sx={{
-            fontSize: { xs: '32px', md: '45px' },
-            color: '#7cf03d',
-            fontWeight: 500,
-          }}
+          sx={{ fontSize: '45px', color: '#7cf03d', fontWeight: 500 }}
         >
           Projects
         </Typography>
@@ -243,31 +238,52 @@ const ProjectsPage = () => {
           }}
         >
           <CarouselProject images={project.images} />
-        </Box>
-        {/* Navigation for projects */}
-        <Box
-          sx={{ display: 'flex', gap: 2, marginTop: 1, borderRadius: '10px' }}
-        >
-          <IconButton
-            sx={{ color: '#fff' }}
-            onClick={() =>
-              setCurrentProject((prev) =>
-                prev === 0 ? ProjectDescription.length - 1 : prev - 1
-              )
-            }
+          {/* Navigation for projects */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              gap: 2,
+              mt: 1,
+              borderRadius: '10px',
+              overflow: 'hidden',
+            }}
           >
-            <ArrowBackIcon />
-          </IconButton>
-          <IconButton
-            sx={{ color: '#fff' }}
-            onClick={() =>
-              setCurrentProject((prev) =>
-                prev === ProjectDescription.length - 1 ? 0 : prev + 1
-              )
-            }
-          >
-            <ArrowBackIcon sx={{ transform: 'rotate(180deg)' }} />
-          </IconButton>
+            <IconButton
+              sx={{
+                padding: '15px',
+                color: '#7cf03d',
+                borderRadius: '10px',
+                backgroundColor: '#323946',
+                cursor: 'pointer',
+                border: '1px solid #7cf03d',
+              }}
+              onClick={() =>
+                setCurrentProject((prev) =>
+                  prev === 0 ? ProjectDescription.length - 1 : prev - 1
+                )
+              }
+            >
+              <ArrowBackIcon />
+            </IconButton>
+            <IconButton
+              sx={{
+                padding: '15px',
+                color: '#7cf03d',
+                borderRadius: '10px',
+                backgroundColor: '#323946',
+                cursor: 'pointer',
+                border: '1px solid #7cf03d',
+              }}
+              onClick={() =>
+                setCurrentProject((prev) =>
+                  prev === ProjectDescription.length - 1 ? 0 : prev + 1
+                )
+              }
+            >
+              <ArrowBackIcon sx={{ transform: 'rotate(180deg)' }} />
+            </IconButton>
+          </Box>
         </Box>
       </Box>
     </Box>
