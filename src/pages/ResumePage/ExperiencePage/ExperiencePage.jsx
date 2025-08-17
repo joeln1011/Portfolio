@@ -50,7 +50,7 @@ const ExperiencePage = () => {
                 Ferbuary 2024 - July 2024
               </Typography>
               <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
-                Frontend Developer
+                Frontend Developer | Intern
               </Typography>
               <Typography
                 sx={{
@@ -76,10 +76,13 @@ const ExperiencePage = () => {
                 AndMine
               </Typography>
               <Typography sx={{ fontSize: '16px' }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                As a Frontend Developer Intern at AndMine (Feb–Jul 2024), I
+                worked on the in‑house CRM, building responsive React + Material
+                UI views for contact management, sales pipelines, and reports. I
+                created reusable table and form components with validation,
+                integrated REST APIs, improved accessibility and performance,
+                and collaborated with designers and backend engineers to ship
+                features end‑to‑end.
               </Typography>
             </Box>
           </Box>

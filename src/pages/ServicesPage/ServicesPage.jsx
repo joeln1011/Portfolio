@@ -11,7 +11,6 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 import { styled } from '@mui/material/styles';
 const StyleBox = styled(Box)(() => ({
-  maxWidth: '400px',
   padding: '30px 25px',
   background: '#323946',
   border: '2px solid #323946',
@@ -112,7 +111,11 @@ const ServicesPage = () => {
       {/* services-box */}
       <Grid container spacing={3} justifyContent="center">
         {services.map((service) => (
-          <Grid size="auto" display="flex" justifyContent="center">
+          <Grid
+            size={{ xs: 12, sm: 6, md: 4 }}
+            display="flex"
+            justifyContent="center"
+          >
             <StyleBox>
               <Box
                 sx={{
