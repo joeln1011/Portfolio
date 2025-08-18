@@ -58,11 +58,11 @@ const NavBar = () => {
         },
       }}
     >
-      <Box>
+      <Link to="/" style={{ textDecoration: 'none' }}>
         <Typography sx={{ color: 'white', fontSize: '30px', fontWeight: 700 }}>
-          Joel Nguyen
+          JOEL NGUYEN
         </Typography>
-      </Box>
+      </Link>
       <Box display={{ xs: 'flex', md: 'none' }}>
         <IconButton
           onClick={() => setDrawerOpen(true)}
