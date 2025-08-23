@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import ContactForm from '../../components/Form/ContactForm';
+import ContactForm from '~/components/Form/ContactForm';
 
 const ContactPage = () => {
   return (

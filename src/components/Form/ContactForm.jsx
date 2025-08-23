@@ -5,12 +5,12 @@ import TextField from '@mui/material/TextField';
 import { useForm } from 'react-hook-form';
 import FieldErrorAlert from './FieldErrorAlert';
 import emailjs from '@emailjs/browser';
-import { SERVICE_ID, TEMPLATE_ID, USER_ID } from '../../utils/constants';
+import { SERVICE_ID, TEMPLATE_ID, USER_ID } from '~/utils/constants';
 import {
   EMAIL_RULE,
   EMAIL_RULE_MESSAGE,
   FIELD_REQUIRED_MESSAGE,
-} from '../../utils/validator';
+} from '~/utils/validator';
 const ContactForm = () => {
   const {
     register,
