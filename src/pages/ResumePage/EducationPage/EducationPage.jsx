@@ -2,8 +2,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-//import { styles } from '@mui/material/styles';
-
 const EducationPage = () => {
   const educationData = [
     {
@@ -12,7 +10,7 @@ const EducationPage = () => {
       degree: 'Website Course',
       institution: 'Online Course',
       description:
-        'A comprehensive online course covering the fundamentals of programming.',
+        'A comprehensive course on modern web development technologies and practices. ',
     },
     {
       id: 2,
