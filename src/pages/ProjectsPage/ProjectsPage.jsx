@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -5,74 +6,64 @@ import Tooltip from '@mui/material/Tooltip';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import IconButton from '@mui/material/IconButton';
-import CarouselProject from '../../components/Carousel/CarouselProject';
-import Portfolio1 from '../../assets/portfolio1.jpg';
-import Portfolio2 from '../../assets/portfolio2.jpg';
-import Portfolio3 from '../../assets/portfolio3.jpg';
-import Portfolio4 from '../../assets/portfolio4.jpg';
-import Portfolio5 from '../../assets/portfolio5.jpg';
-import Portfolio6 from '../../assets/portfolio6.jpg';
-import { useState } from 'react';
+import Portfolio1 from '~/assets/portfolio1.jpg';
+import Portfolio2 from '~/assets/portfolio2.jpg';
+import Portfolio3 from '~/assets/portfolio3.jpg';
+import Portfolio4 from '~/assets/portfolio4.jpg';
+import Portfolio5 from '~/assets/portfolio5.jpg';
+import CarouselProject from '~/components/Carousel/CarouselProject';
+
 const ProjectDescription = [
   {
     id: 1,
-    title: 'Frontend Project',
+    title: 'Fullstack Project | Trello Web',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: '#',
-    githubLink: '#',
+      'A project management tool that helps teams organize tasks and collaborate effectively.',
+    technologies: 'React, Redux, MongoDB, Express, Node.js',
+    liveLink: 'https://trello-web-pink-alpha.vercel.app',
+    githubLink: 'https://github.com/joeln1011/TrelloWeb',
     images: [Portfolio1],
   },
   {
     id: 2,
-    title: 'Fullstack Project',
+    title: 'Frontend Project | Portfolio Website',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: '#',
-    githubLink: '#',
+      'This project showcases my skills in frontend development, utilizing technologies such as React, MUI, and JavaScript to create a responsive and interactive user interface.',
+    technologies: 'React, MUI, JavaScript',
+    liveLink: 'https://www.joelnguyendev.com',
+    githubLink: 'https://github.com/joeln1011/Portfolio',
     images: [Portfolio2],
   },
   {
     id: 3,
-    title: 'We Connect',
+    title: 'Fullstack Project | We Connect',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
+      'A social media platform that connects people and allows them to share their thoughts and ideas.',
+    technologies: 'React, Redux, Node.js, Express, MongoDB',
     liveLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/joeln1011/WeConnectApp',
     images: [Portfolio3],
   },
+
   {
     id: 4,
-    title: 'Portfolio Website',
+    title: 'Frontend Project | Movie App',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: 'https://www.joelnguyendev.com',
-    githubLink: '#',
+      'A movie discovery app that allows users to search for and explore movies.',
+    technologies: 'React, Redux, Node.js, Express, MongoDB',
+    liveLink: '#',
+    githubLink: 'https://github.com/joeln1011/MovieApp',
     images: [Portfolio4],
   },
   {
     id: 5,
-    title: 'Fullstack Project',
+    title: ' Fullstack Project | Inventory Management System',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: '#',
-    githubLink: '#',
+      'An inventory management system that helps businesses track and manage their stock levels.',
+    technologies: 'TypeScript, Node.js, Express, AWS',
+    liveLink: 'https://main.d86ipghtol9c9.amplifyapp.com/',
+    githubLink: 'https://github.com/joeln1011/InventoryManagement',
     images: [Portfolio5],
-  },
-  {
-    id: 6,
-    title: 'Fullstack Project',
-    description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, HTML, CSS, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'HTML5, CSS3, JavaScript',
-    liveLink: '#',
-    githubLink: '#',
-    images: [Portfolio6],
   },
 ];
 

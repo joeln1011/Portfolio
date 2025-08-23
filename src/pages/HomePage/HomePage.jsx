@@ -6,7 +6,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MyResume from '/resume/HungNguyenResume.pdf';
-import User from '../../assets/hungnguyen.png';
+import User from '~/assets/hungnguyen.png';
+
 import { styled } from '@mui/material/styles';
 const SpanBox = styled(Box)(() => ({
   component: 'span',
