@@ -9,6 +9,7 @@ const AboutMePage = () => {
     { fieldName: 'Location', fieldDescription: 'Georgia, USA' },
     { fieldName: 'Email', fieldDescription: 'joelnt1011@gmail.com' },
     { fieldName: 'Freelance', fieldDescription: 'Available' },
+    { fieldName: 'Full-time', fieldDescription: 'Available' },
     { fieldName: 'Language', fieldDescription: 'English, Vietnamese' },
   ];
 

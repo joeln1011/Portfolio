@@ -7,10 +7,10 @@ const EducationPage = () => {
     {
       id: 1,
       year: 'March 2025 - July 2025',
-      degree: 'Website Course',
-      institution: 'Online Course',
+      degree: 'Udemy Full Stack Web Development',
+      institution: 'Udemy',
       description:
-        'A comprehensive course on modern web development technologies and practices. ',
+        'A comprehensive course on modern web development technologies and practices.',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const EducationPage = () => {
       degree: 'Bachelor of Mobile Application Development',
       institution: 'Academy of Interactive Technology',
       description:
-        'A four-year degree program focused on mobile application development.',
+        'A four-year degree program focused on mobile application development and related technologies.',
     },
     {
       id: 3,
