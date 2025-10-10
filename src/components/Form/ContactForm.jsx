@@ -95,7 +95,7 @@ const ContactForm = () => {
                 name="phone"
                 sx={{ backgroundColor: '#1f242d', width: '100%' }}
                 hiddenLabel
-                placeholder="Phone Number"
+                placeholder="Phone Number (Optional)"
                 variant="outlined"
               />
             </Box>

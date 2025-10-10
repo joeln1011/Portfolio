@@ -27,7 +27,7 @@ const AboutMePage = () => {
       </Box>
       <Box>
         <Typography component="p" sx={{ fontSize: '16px' }}>
-          Hello! I'm Hung Nguyen, a passionate and dedicated full-stack web
+          Hello! I'm Joel Nguyen, a passionate and dedicated full-stack web
           developer with a strong foundation in both front-end and back-end
           technologies. I love creating dynamic, responsive, and user-friendly
           web applications that provide seamless experiences across all devices.
