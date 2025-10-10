@@ -28,8 +28,9 @@ const ProjectDescription = [
     id: 2,
     title: 'Frontend Project | Portfolio Website',
     description:
-      'This project showcases my skills in frontend development, utilizing technologies such as React, MUI, and JavaScript to create a responsive and interactive user interface.',
-    technologies: 'React, MUI, JavaScript',
+      'This portfolio app showcases professional experience, education, skills, and projects using a modern, responsive design. Built with React and Material UI, it features animated transitions, interactive components, and easy navigation to highlight web development and design expertise.',
+    technologies:
+      'React, Material UI, React Router, styled-components, JavaScript',
     liveLink: 'https://www.joelnguyendev.com',
     githubLink: 'https://github.com/joeln1011/Portfolio',
     images: [Portfolio2],
@@ -38,9 +39,9 @@ const ProjectDescription = [
     id: 3,
     title: 'Fullstack Project | We Connect',
     description:
-      'A social media platform that connects people and allows them to share their thoughts and ideas.',
-    technologies: 'React, Redux, Node.js, Express, MongoDB',
-    liveLink: '#',
+      'WeConnectApp is a social networking platform that enables users to connect, join groups, share posts, and communicate through real-time messaging and video calls. The app features notifications, user profiles, and interactive group communities for seamless online collaboration and engagement.',
+    technologies: 'React, Redux, WebRTC, SocketIo, React Router, REST API',
+    liveLink: 'https://we-connect-d9a4sds2r-joels-projects-5af3d47d.vercel.app',
     githubLink: 'https://github.com/joeln1011/WeConnectApp',
     images: [Portfolio3],
   },
@@ -50,7 +51,7 @@ const ProjectDescription = [
     title: 'Frontend Project | Movie App',
     description:
       'A movie discovery app that allows users to search for and explore movies.',
-    technologies: 'React, Redux, Node.js, Express, MongoDB',
+    technologies: 'React, Redux, Node.js, Express',
     liveLink: '#',
     githubLink: 'https://github.com/joeln1011/MovieApp',
     images: [Portfolio4],

@@ -20,7 +20,6 @@ function App() {
         <Route path="/resume" element={<ResumePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        {/* Redirect any unmatched routes to the home page */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Container>
