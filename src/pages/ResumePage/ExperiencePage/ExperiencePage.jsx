@@ -47,7 +47,7 @@ const ExperiencePage = () => {
               }}
             >
               <Typography sx={{ fontSize: '16px', color: '#7cf03d' }}>
-                Ferbuary 2024 - July 2024
+                June 2024 - December 2024
               </Typography>
               <Typography sx={{ fontSize: '20px', fontWeight: 700 }}>
                 Frontend Developer | Intern
@@ -76,13 +76,13 @@ const ExperiencePage = () => {
                 AndMine
               </Typography>
               <Typography sx={{ fontSize: '16px' }}>
-                As a Frontend Developer Intern at AndMine (Feb–Jul 2024), I
-                worked on the in‑house CRM, building responsive React + Material
-                UI views for contact management, sales pipelines, and reports. I
-                created reusable table and form components with validation,
-                integrated REST APIs, improved accessibility and performance,
-                and collaborated with designers and backend engineers to ship
-                features end‑to‑end.
+                • A Frontend Developer Intern at AndMine (Jun–Dec 2024), worked
+                on the in‑house CRM, building responsive React + Material UI
+                views for contact management, sales pipelines, and reports.
+                <br /> • I created reusable table and form components with
+                validation, integrated REST APIs, improved accessibility and
+                performance, and collaborated with designers and backend
+                engineers to ship features end‑to‑end.
               </Typography>
             </Box>
           </Box>

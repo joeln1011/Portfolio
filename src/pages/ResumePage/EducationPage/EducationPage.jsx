@@ -6,7 +6,7 @@ const EducationPage = () => {
   const educationData = [
     {
       id: 1,
-      year: 'March 2025 - July 2025',
+      year: 'April 2025 - August 2025',
       degree: 'Udemy Full Stack Web Development',
       institution: 'Udemy',
       description:
@@ -14,15 +14,15 @@ const EducationPage = () => {
     },
     {
       id: 2,
-      year: 'March 2019 - July 2023',
+      year: 'March 2019 - November 2023',
       degree: 'Bachelor of Mobile Application Development',
       institution: 'Academy of Interactive Technology',
       description:
-        'A four-year degree program focused on mobile application development and related technologies.',
+        'A four-year degree program focused on mobile app development, user experience design, and software engineering principles.',
     },
     {
       id: 3,
-      year: 'July 2017 - March 2018',
+      year: 'November 2017 - November 2018',
       degree: 'Diploma of Information Technology',
       institution: 'James Cook University',
       description:

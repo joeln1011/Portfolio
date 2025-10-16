@@ -42,21 +42,22 @@ const AboutMePage = () => {
         </Typography>
         <Typography component="p" sx={{ fontSize: '16px' }}>
           In my free time, I enjoy hiking, reading, and playing video games. I'm
-          always up for a challenge and love learning new things.
+          always up for a challenge and love learning new things. Feel free to
+          reach out if you'd like to connect!
         </Typography>
       </Box>
-      <Grid container spacing={3} sx={{ marginTop: '20px' }}>
-        <Grid sx={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {aboutMeDetails.map((detail, index) => (
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        sx={{ marginTop: '20px' }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
+      >
+        {aboutMeDetails.map((detail, index) => (
+          <Grid key={index} size={{ xs: 12, sm: 4, md: 4 }}>
             <Box
-              key={index}
               sx={{
                 display: 'flex',
-                justifyContent: {
-                  xs: 'center',
-                  sm: 'flex-start',
-                  md: 'flex-start',
-                },
+                justifyContent: 'flex-start',
                 gap: 1,
               }}
             >
@@ -67,8 +68,8 @@ const AboutMePage = () => {
                 {detail.fieldDescription}
               </Typography>
             </Box>
-          ))}
-        </Grid>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

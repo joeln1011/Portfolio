@@ -52,7 +52,7 @@ const ProjectDescription = [
     description:
       'A movie discovery app that allows users to search for and explore movies.',
     technologies: 'React, Redux, Node.js, Express',
-    liveLink: '#',
+    liveLink: '',
     githubLink: 'https://github.com/joeln1011/MovieApp',
     images: [Portfolio4],
   },
@@ -236,7 +236,7 @@ const ProjectsPage = () => {
               display: 'flex',
               justifyContent: 'flex-end',
               gap: 2,
-              mt: 1,
+              mt: 3,
               borderRadius: '10px',
               overflow: 'hidden',
             }}
