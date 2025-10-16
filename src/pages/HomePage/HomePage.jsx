@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import MyResume from '/resume/HungNguyenResume.pdf';
+import MyResume from '/resume/HungJoelNguyenIT.pdf';
 import User from '~/assets/hungnguyen.png';
 
 import { styled } from '@mui/material/styles';
